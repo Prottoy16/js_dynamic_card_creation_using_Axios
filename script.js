@@ -34,8 +34,15 @@
 // ]
 
 const fetchData=async()=>{
-    const res= await axios("https://jsonplaceholder.typicode.com/posts");
-    return res.data;
+    try{
+        const res= await axios("https://jsonplaceholder.typicode.com/post");
+        return res.data;
+    } catch(err){
+        throw Error("Not fetched");
+    }
+       
+    
+    
 }
 
 
