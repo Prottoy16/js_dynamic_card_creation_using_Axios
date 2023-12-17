@@ -35,7 +35,7 @@
 
 const fetchData=async()=>{
     try{
-        const res= await axios("https://jsonplaceholder.typicode.com/post");
+        const res= await axios("https://jsonplaceholder.typicode.com/posts");
         return res.data;
     } catch(err){
         throw Error("Not fetched");
